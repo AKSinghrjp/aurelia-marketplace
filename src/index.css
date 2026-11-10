@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0b0d12] text-stone-200 antialiased font-sans selection:bg-[#c5a059] selection:text-black;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Glassmorphism & Glowing Hover Effect for Tabs and Cards */
+.glass-tab {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-tab:hover {
+  background: rgba(255, 255, 255, 0.09) !important;
+  border-color: rgba(197, 160, 89, 0.7) !important;
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: translateY(-1px);
+}
+
+.glass-card {
+  background: rgba(16, 20, 28, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(22, 28, 38, 0.85);
+  border-color: rgba(197, 160, 89, 0.55);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 22px rgba(197, 160, 89, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Custom Antique Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1016;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2317;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
